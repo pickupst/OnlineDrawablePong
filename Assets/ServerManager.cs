@@ -32,6 +32,8 @@ public class ServerManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("Odaya Girildi");
+
+        GameObject cube = PhotonNetwork.Instantiate("Cube", Vector3.zero, Quaternion.identity,0 , null);
     }
 
     public override void OnLeftRoom()
