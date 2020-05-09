@@ -34,6 +34,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
         Debug.Log("Odaya Girildi");
 
         GameObject cube = PhotonNetwork.Instantiate("Cube", Vector3.zero, Quaternion.identity,0 , null);
+        cube.GetComponent<PhotonView>().Owner.NickName = "NickName";
     }
 
     public override void OnLeftRoom()
